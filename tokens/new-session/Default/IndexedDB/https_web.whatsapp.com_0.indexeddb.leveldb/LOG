@@ -1,0 +1,70 @@
+2024/08/25-21:22:43.099 a150 Reusing MANIFEST /home/felipe/wppconect/tokens/new-session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/08/25-21:22:43.100 a150 Recovering log #1352
+2024/08/25-21:22:43.142 a150 Reusing old log /home/felipe/wppconect/tokens/new-session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/001352.log 
+2024/08/25-21:22:44.182 a15c Level-0 table #1388: started
+2024/08/25-21:22:44.203 a15c Level-0 table #1388: 763017 bytes OK
+2024/08/25-21:22:44.205 a15c Delete type=0 #1352
+2024/08/25-21:22:44.205 a151 Manual compaction at level-0 from '\x00$\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00%\x00\x00\x00' @ 0 : 0; will stop at '\x00$\x00\x00\x05' @ 4341829 : 1
+2024/08/25-21:22:44.205 a151 Compacting 1@0 + 0@1 files
+2024/08/25-21:22:44.224 a151 Generated table #1389@0: 13551 keys, 302744 bytes
+2024/08/25-21:22:44.227 a151 Generated table #1390@0: 362 keys, 28667 bytes
+2024/08/25-21:22:44.228 a151 Generated table #1391@0: 227 keys, 5087 bytes
+2024/08/25-21:22:44.228 a151 Compacted 1@0 + 0@1 files => 336498 bytes
+2024/08/25-21:22:44.229 a151 compacted to: files[ 0 3 33 0 0 0 0 ]
+2024/08/25-21:22:44.230 a151 Delete type=2 #1388
+2024/08/25-21:22:44.231 a151 Manual compaction at level-0 from '\x00$\x00\x00\x05' @ 4341829 : 1 .. '\x00%\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/08/25-21:22:46.741 a151 Compacting 1@1 + 10@2 files
+2024/08/25-21:22:46.812 a151 Generated table #1392@1: 55423 keys, 2225296 bytes
+2024/08/25-21:22:46.855 a151 Generated table #1393@1: 19899 keys, 2182292 bytes
+2024/08/25-21:22:46.883 a151 Generated table #1394@1: 2654 keys, 2154814 bytes
+2024/08/25-21:22:46.909 a151 Generated table #1395@1: 2830 keys, 2160451 bytes
+2024/08/25-21:22:46.935 a151 Generated table #1396@1: 3245 keys, 2156867 bytes
+2024/08/25-21:22:46.963 a151 Generated table #1397@1: 4126 keys, 2154048 bytes
+2024/08/25-21:22:46.989 a151 Generated table #1398@1: 2501 keys, 2153641 bytes
+2024/08/25-21:22:47.015 a151 Generated table #1399@1: 2943 keys, 2154399 bytes
+2024/08/25-21:22:47.038 a151 Generated table #1400@1: 2309 keys, 2146128 bytes
+2024/08/25-21:22:47.070 a151 Generated table #1401@1: 2777 keys, 2153045 bytes
+2024/08/25-21:22:47.073 a151 Generated table #1402@1: 161 keys, 81934 bytes
+2024/08/25-21:22:47.074 a151 Compacted 1@1 + 10@2 files => 21722915 bytes
+2024/08/25-21:22:47.075 a151 compacted to: files[ 0 2 34 0 0 0 0 ]
+2024/08/25-21:22:47.076 a151 Compacting 1@1 + 15@2 files
+2024/08/25-21:22:47.116 a151 Generated table #1403@1: 4282 keys, 2150306 bytes
+2024/08/25-21:22:47.206 a151 Generated table #1404@1: 22858 keys, 2182493 bytes
+2024/08/25-21:22:47.339 a151 Generated table #1405@1: 35622 keys, 2256888 bytes
+2024/08/25-21:22:47.409 a151 Generated table #1406@1: 28940 keys, 2266730 bytes
+2024/08/25-21:22:47.477 a151 Generated table #1407@1: 29630 keys, 2262260 bytes
+2024/08/25-21:22:47.540 a151 Generated table #1408@1: 30903 keys, 2240840 bytes
+2024/08/25-21:22:47.588 a151 Generated table #1409@1: 16234 keys, 2214052 bytes
+2024/08/25-21:22:47.619 a151 Generated table #1410@1: 8879 keys, 2131410 bytes
+2024/08/25-21:22:47.649 a151 Generated table #1411@1: 9030 keys, 2132762 bytes
+2024/08/25-21:22:47.731 a151 Generated table #1412@1: 88878 keys, 2235971 bytes
+2024/08/25-21:22:47.743 a151 Generated table #1413@1: 12108 keys, 259429 bytes
+2024/08/25-21:22:47.743 a151 Compacted 1@1 + 15@2 files => 22333141 bytes
+2024/08/25-21:22:47.745 a151 compacted to: files[ 0 1 30 0 0 0 0 ]
+2024/08/25-21:22:47.746 a151 Delete type=2 #1357
+2024/08/25-21:22:47.746 a151 Delete type=2 #1372
+2024/08/25-21:22:47.746 a151 Delete type=2 #1364
+2024/08/25-21:22:47.746 a151 Delete type=2 #1358
+2024/08/25-21:22:47.746 a151 Delete type=2 #1368
+2024/08/25-21:22:47.746 a151 Delete type=2 #1203
+2024/08/25-21:22:47.746 a151 Delete type=2 #1365
+2024/08/25-21:22:47.746 a151 Delete type=2 #1373
+2024/08/25-21:22:47.746 a151 Delete type=2 #1359
+2024/08/25-21:22:47.746 a151 Delete type=2 #1231
+2024/08/25-21:22:47.746 a151 Delete type=2 #1259
+2024/08/25-21:22:47.746 a151 Delete type=2 #1375
+2024/08/25-21:22:47.747 a151 Delete type=2 #1370
+2024/08/25-21:22:47.747 a151 Delete type=2 #1374
+2024/08/25-21:22:47.747 a151 Delete type=2 #1369
+2024/08/25-21:22:47.747 a151 Delete type=2 #1366
+2024/08/25-21:22:47.747 a151 Delete type=2 #1339
+2024/08/25-21:22:47.747 a151 Delete type=2 #1376
+2024/08/25-21:22:47.747 a151 Delete type=2 #1377
+2024/08/25-21:22:47.747 a151 Delete type=2 #1360
+2024/08/25-21:22:47.747 a151 Delete type=2 #1361
+2024/08/25-21:22:47.747 a151 Delete type=2 #1363
+2024/08/25-21:22:47.747 a151 Delete type=2 #1390
+2024/08/25-21:22:47.747 a151 Delete type=2 #1362
+2024/08/25-21:22:47.747 a151 Delete type=2 #1367
+2024/08/25-21:22:47.747 a151 Delete type=2 #1371
+2024/08/25-21:22:47.748 a151 Delete type=2 #1389
