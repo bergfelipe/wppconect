@@ -33,12 +33,12 @@ wppconnect
 // Função para iniciar o processamento de mensagens
 function start(client) {
   console.log('Starting message listener');
-  client.onMessage(async (message) => {
+  client.onMessage((message) => {
     console.log('Message received:', message);
 
     const responses = {
       'Hello': 'Oi, como você está?',
-      'Hi': 'Olá! Precisa de alguma ajuda sua linda?',
+      'Hi': 'Olá! Precisa de alguma ajuda?',
       'Good morning': 'Bom dia! Como posso ajudar?',
       'Good night': 'Boa noite! Durma bem!',
       'How are you?': 'Estou bem, obrigado por perguntar! E você?',
@@ -79,71 +79,62 @@ function start(client) {
       }
     );
 
-    switch (message.type) {
-      case 'image':
-        const imagePath = path.join(__dirname, '/wppconect/public/foto.png');
-        client
-          .sendImage(message.from, imagePath, 'Image Caption', 'Here is an image for you!')
-          .then((result) => {
-            console.log(`Image sent to ${message.from}`);
-            console.log('Result:', result);
-          })
-          .catch((error) => {
-            console.error(`Error sending image to ${message.from}:`, error);
-          });
-        break;
-      case 'video':
-        const videoPath = path.join(__dirname, '/wppconect/public/video.mp4');
-        client
-          .sendVideo(message.from, videoPath, 'Video Caption', 'Here is a video for you!')
-          .then((result) => {
-            console.log(`Video sent to ${message.from}`);
-            console.log('Result:', result);
-          })
-          .catch((error) => {
-            console.error(`Error sending video to ${message.from}:`, error);
-          });
-        break;
-      case 'audio':
-        const audioPath = path.join(__dirname, 'path/to/your/audio.mp3');
-        client
-          .sendAudio(message.from, audioPath, 'Audio Caption', 'Here is an audio message for you!')
-          .then((result) => {
-            console.log(`Audio sent to ${message.from}`);
-            console.log('Result:', result);
-          })
-          .catch((error) => {
-            console.error(`Error sending audio to ${message.from}:`, error);
-          });
-        break;
-      case 'document':
-        const filePath = path.join(__dirname, '/wppconect/public/Procuração.docx');
-        client
-          .sendFile(message.from, filePath, 'Document Caption', 'Here is a document for you!')
-          .then((result) => {
-            console.log(`Document sent to ${message.from}`);
-            console.log('Result:', result);
-          })
-          .catch((error) => {
-            console.error(`Error sending document to ${message.from}:`, error);
-          });
-        break;
-      default:
-        if (response) {
-          // Enviar resposta de texto
-          client
-            .sendText(message.from, response)
-            .then((result) => {
-              console.log(`Message sent to ${message.from}: ${response}`);
-              console.log('Result:', result);
-            })
-            .catch((error) => {
-              console.error(`Error when sending to ${message.from}:`, error);
-            });
-        } else {
-          console.log(`Received unknown message from ${message.from}: ${message.body}`);
-        }
-        break;
+    // Verifica e envia imagem para a mensagem "eai"
+    if (message.body.toLowerCase() === 'eai') {
+      const imagePath = path.resolve(__dirname, 'public/foto.png'); // Caminho para a imagem
+      const caption = 'Aqui está uma imagem para você!';
+      
+      client.sendImage(message.from, imagePath, 'foto.png', caption)
+        .then((result) => {
+          console.log(`Image sent to ${message.from}`);
+          console.log('Result:', result);
+        })
+        .catch((error) => {
+          console.error(`Error when sending image to ${message.from}:`, error);
+        });
+    } else if (message.body.toLowerCase() === 'video') {
+      const videoPath = path.resolve(__dirname, 'public/video.mp4'); // Exemplo de caminho para vídeo
+      client.sendFile(message.from, videoPath, 'video.mp4', 'Aqui está um vídeo para você!')
+        .then((result) => {
+          console.log(`Video sent to ${message.from}`);
+          console.log('Result:', result);
+        })
+        .catch((error) => {
+          console.error(`Error when sending video to ${message.from}:`, error);
+        });
+    } else if (message.body.toLowerCase() === 'audio') {
+      const audioPath = path.resolve(__dirname, 'public/audio.ogg'); // Exemplo de caminho para áudio
+      client.sendFile(message.from, audioPath, 'audio.mp3', 'Aqui está um áudio para você!')
+        .then((result) => {
+          console.log(`Audio sent to ${message.from}`);
+          console.log('Result:', result);
+        })
+        .catch((error) => {
+          console.error(`Error when sending audio to ${message.from}:`, error);
+        });
+    } else if (message.body.toLowerCase() === 'enviar documento') {
+      const docPath = path.resolve(__dirname, 'public/Procuração.docx'); // Caminho para o documento
+      client.sendFile(message.from, docPath, 'Procuração.docx', 'Aqui está o documento que você pediu!')
+        .then((result) => {
+          console.log(`Document sent to ${message.from}`);
+          console.log('Result:', result);
+        })
+        .catch((error) => {
+          console.error(`Error when sending document to ${message.from}:`, error);
+        });
+    } else if (response) {
+      // Enviar uma mensagem de texto se for uma resposta padrão
+      client
+        .sendText(message.from, response)
+        .then((result) => {
+          console.log(`Message sent to ${message.from}: ${response}`);
+          console.log('Result:', result);
+        })
+        .catch((error) => {
+          console.error(`Error when sending to ${message.from}:`, error);
+        });
+    } else {
+      console.log(`Received unknown message from ${message.from}: ${message.body}`);
     }
   });
 }
